@@ -1,0 +1,15 @@
+{
+    "port": 3000,
+    "db": {
+        "url": "localhost",
+        "user": "root",
+        "password": "root",
+        "database": "mydb"
+    },
+    "security": {
+        "salt": "@v~7Qé€E$¤r%&6^{m'°3S1xµ§"
+    },
+    "cache": {
+        "ttl": 30000
+    }
+}
