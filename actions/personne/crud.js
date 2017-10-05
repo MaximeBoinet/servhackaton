@@ -15,9 +15,11 @@ module.exports = (api) => {
           if (err) {
             return res.status(500).send(err);
           }
-          if (result.lenght() == 0) {
+
+          if (!result || result.length == 0) {
             return res.status(204).send("No data found");
           }
+
           return res.send(result);
     });
   }
@@ -32,9 +34,10 @@ module.exports = (api) => {
         return res.status(500).send(err);
       }
 
-      if (result.lenght() == 0) {
+      if (!result || result.length == 0) {
         return res.status(204).send("No data found");
       }
+
       return res.send(result);
     })
   }
