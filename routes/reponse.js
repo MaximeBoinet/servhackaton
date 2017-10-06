@@ -5,7 +5,7 @@ module.exports = (api) => {
 		api.middlewares.bodyParser.json(),
 		api.actions.reponse.create);
 
-  router.put('/validate',
+  router.put('/validate/:id',
 		api.actions.reponse.validate);
 
   router.delete('/del/:id',

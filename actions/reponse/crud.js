@@ -20,7 +20,7 @@ module.exports = (api) => {
   }
 
   function validate(req, res, next) {
-    con.query("UPDATE Reponse SET Status = 2 WHERE idReponse ="+ req.body.id+"",
+    con.query("UPDATE Reponse SET Status = 2 WHERE idReponse ="+ req.params.id+"",
     (err, result, fields) => {
       if (err) {
         return res.status(500).send(err);
@@ -44,7 +44,7 @@ module.exports = (api) => {
       if (!result || result.length == 0) {
         return res.status(204).send("No data found");
       }
-      
+
       return res.send(result);
     });
   }

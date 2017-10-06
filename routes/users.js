@@ -5,7 +5,7 @@ module.exports = (api) => {
 		api.middlewares.bodyParser.json(),
 		api.actions.personne.exist);
 
-	router.get('/matieres',
+	router.get('/matieres/:id',
 		api.actions.personne.getAllMatiere);
 
 	return router;
